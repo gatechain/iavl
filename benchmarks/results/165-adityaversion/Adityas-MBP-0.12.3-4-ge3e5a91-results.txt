@@ -1,8 +1,8 @@
 cd benchmarks && \
-		go test -ldflags "-X github.com/tendermint/iavl.Version=0.12.3-4-ge3e5a91 -X github.com/tendermint/iavl.Commit=e3e5a91edda5a9d525c49749ad102d9cf3b602b4 -X github.com/tendermint/iavl.Branch=aditya/version" -bench=RandomBytes . && \
-		go test -ldflags "-X github.com/tendermint/iavl.Version=0.12.3-4-ge3e5a91 -X github.com/tendermint/iavl.Commit=e3e5a91edda5a9d525c49749ad102d9cf3b602b4 -X github.com/tendermint/iavl.Branch=aditya/version" -bench=Small . && \
-		go test -ldflags "-X github.com/tendermint/iavl.Version=0.12.3-4-ge3e5a91 -X github.com/tendermint/iavl.Commit=e3e5a91edda5a9d525c49749ad102d9cf3b602b4 -X github.com/tendermint/iavl.Branch=aditya/version" -bench=Medium . && \
-		go test -ldflags "-X github.com/tendermint/iavl.Version=0.12.3-4-ge3e5a91 -X github.com/tendermint/iavl.Commit=e3e5a91edda5a9d525c49749ad102d9cf3b602b4 -X github.com/tendermint/iavl.Branch=aditya/version" -bench=BenchmarkMemKeySizes .
+		go test -ldflags "-X github.com/gatechain/iavl.Version=0.12.3-4-ge3e5a91 -X github.com/gatechain/iavl.Commit=e3e5a91edda5a9d525c49749ad102d9cf3b602b4 -X github.com/gatechain/iavl.Branch=aditya/version" -bench=RandomBytes . && \
+		go test -ldflags "-X github.com/gatechain/iavl.Version=0.12.3-4-ge3e5a91 -X github.com/gatechain/iavl.Commit=e3e5a91edda5a9d525c49749ad102d9cf3b602b4 -X github.com/gatechain/iavl.Branch=aditya/version" -bench=Small . && \
+		go test -ldflags "-X github.com/gatechain/iavl.Version=0.12.3-4-ge3e5a91 -X github.com/gatechain/iavl.Commit=e3e5a91edda5a9d525c49749ad102d9cf3b602b4 -X github.com/gatechain/iavl.Branch=aditya/version" -bench=Medium . && \
+		go test -ldflags "-X github.com/gatechain/iavl.Version=0.12.3-4-ge3e5a91 -X github.com/gatechain/iavl.Commit=e3e5a91edda5a9d525c49749ad102d9cf3b602b4 -X github.com/gatechain/iavl.Branch=aditya/version" -bench=BenchmarkMemKeySizes .
 iavl: 0.12.3-4-ge3e5a91
 git commit: e3e5a91edda5a9d525c49749ad102d9cf3b602b4
 git branch: aditya/version
@@ -10,14 +10,14 @@ go version go1.12.1 darwin/amd64
 
 goos: darwin
 goarch: amd64
-pkg: github.com/tendermint/iavl/benchmarks
+pkg: github.com/gatechain/iavl/benchmarks
 BenchmarkRandomBytes/random-4-8         	30000000	        51.1 ns/op
 BenchmarkRandomBytes/random-16-8        	20000000	        77.0 ns/op
 BenchmarkRandomBytes/random-32-8        	20000000	       111 ns/op
 BenchmarkRandomBytes/random-100-8       	 5000000	       255 ns/op
 BenchmarkRandomBytes/random-1000-8      	 1000000	      2115 ns/op
 PASS
-ok  	github.com/tendermint/iavl/benchmarks	9.235s
+ok  	github.com/gatechain/iavl/benchmarks	9.235s
 iavl: 0.12.3-4-ge3e5a91
 git commit: e3e5a91edda5a9d525c49749ad102d9cf3b602b4
 git branch: aditya/version
@@ -26,7 +26,7 @@ go version go1.12.1 darwin/amd64
 Init Tree took 0.90 MB
 goos: darwin
 goarch: amd64
-pkg: github.com/tendermint/iavl/benchmarks
+pkg: github.com/gatechain/iavl/benchmarks
 BenchmarkSmall/memdb-1000-100-4-10/query-miss-8         	 1000000	      2432 ns/op
 BenchmarkSmall/memdb-1000-100-4-10/query-hits-8         	  500000	      2825 ns/op
 BenchmarkSmall/memdb-1000-100-4-10/update-8             	   20000	    116399 ns/op
@@ -37,7 +37,7 @@ BenchmarkSmall/goleveldb-1000-100-4-10/query-hits-8     	  300000	      4671 ns/
 BenchmarkSmall/goleveldb-1000-100-4-10/update-8         	   20000	    100226 ns/op
 BenchmarkSmall/goleveldb-1000-100-4-10/block-8          	     100	  18355816 ns/op
 PASS
-ok  	github.com/tendermint/iavl/benchmarks	17.244s
+ok  	github.com/gatechain/iavl/benchmarks	17.244s
 iavl: 0.12.3-4-ge3e5a91
 git commit: e3e5a91edda5a9d525c49749ad102d9cf3b602b4
 git branch: aditya/version
@@ -46,7 +46,7 @@ go version go1.12.1 darwin/amd64
 Init Tree took 85.05 MB
 goos: darwin
 goarch: amd64
-pkg: github.com/tendermint/iavl/benchmarks
+pkg: github.com/gatechain/iavl/benchmarks
 BenchmarkMedium/memdb-100000-100-16-40/query-miss-8         	  200000	      7335 ns/op
 BenchmarkMedium/memdb-100000-100-16-40/query-hits-8         	  200000	      8195 ns/op
 BenchmarkMedium/memdb-100000-100-16-40/update-8             	    5000	   1359239 ns/op
@@ -57,6 +57,6 @@ BenchmarkMedium/goleveldb-100000-100-16-40/query-hits-8     	   50000	     37218
 BenchmarkMedium/goleveldb-100000-100-16-40/update-8         	   10000	    471017 ns/op
 BenchmarkMedium/goleveldb-100000-100-16-40/block-8          	      20	  62199885 ns/op
 PASS
-ok  	github.com/tendermint/iavl/benchmarks	31.865s
+ok  	github.com/gatechain/iavl/benchmarks	31.865s
 PASS
-ok  	github.com/tendermint/iavl/benchmarks	0.016s
+ok  	github.com/gatechain/iavl/benchmarks	0.016s

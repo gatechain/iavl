@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tendermint/iavl"
+	"github.com/gatechain/iavl"
 	dbm "github.com/tendermint/tm-db"
 )
 

@@ -8,7 +8,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/gatechain/crypto/tmhash"
 )
 
 type RangeProof struct {
